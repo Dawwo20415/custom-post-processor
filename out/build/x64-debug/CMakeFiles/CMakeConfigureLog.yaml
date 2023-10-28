@@ -153,3 +153,105 @@ events:
         
       exitCode: 0
 ...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "D:/Production Software/Visual Studio Community/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.26/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "D:/Production Software/Visual Studio Community/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.26/Modules/CheckCSourceCompiles.cmake:76 (cmake_check_source_compiles)"
+      - "D:/Production Software/Visual Studio Community/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.26/Modules/FindThreads.cmake:97 (CHECK_C_SOURCE_COMPILES)"
+      - "D:/Production Software/Visual Studio Community/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.26/Modules/FindThreads.cmake:163 (_threads_check_libc)"
+      - "glfw-3.3.8/CMakeLists.txt:62 (find_package)"
+    checks:
+      - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
+    directories:
+      source: "R:/Repositories/CustomPostProcessor/out/build/x64-debug/CMakeFiles/CMakeScratch/TryCompile-y2mv5k"
+      binary: "R:/Repositories/CustomPostProcessor/out/build/x64-debug/CMakeFiles/CMakeScratch/TryCompile-y2mv5k"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3 -DVK_PROTOTYPES"
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "R:/Repositories/CustomPostProcessor/glfw-3.3.8/CMake/modules"
+      CMAKE_MSVC_DEBUG_INFORMATION_FORMAT: "$<IF:$<AND:$<C_COMPILER_ID:MSVC>,$<CXX_COMPILER_ID:MSVC>>,$<$<CONFIG:Debug,RelWithDebInfo>:EditAndContinue>,$<$<CONFIG:Debug,RelWithDebInfo>:ProgramDatabase>>"
+    buildResult:
+      variable: "CMAKE_HAVE_LIBC_PTHREAD"
+      cached: true
+      stdout: |
+        Change Dir: R:/Repositories/CustomPostProcessor/out/build/x64-debug/CMakeFiles/CMakeScratch/TryCompile-y2mv5k
+        
+        Run Build Command(s):D:/Production Software/Visual Studio Community/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe -v cmTC_2c3e4 && [1/2] "D:\\Production Software\\Visual Studio Community\\2022\\Community\\VC\\Tools\\MSVC\\14.37.32822\\bin\\Hostx64\\x64\\cl.exe"  /nologo -DCMAKE_HAVE_LIBC_PTHREAD  /DWIN32 /D_WINDOWS /W3 -DVK_PROTOTYPES  /MDd /Ob0 /Od /RTC1 -Zi /showIncludes /FoCMakeFiles\\cmTC_2c3e4.dir\\src.c.obj /FdCMakeFiles\\cmTC_2c3e4.dir\\ /FS -c R:\\Repositories\\CustomPostProcessor\\out\\build\\x64-debug\\CMakeFiles\\CMakeScratch\\TryCompile-y2mv5k\\src.c
+        FAILED: CMakeFiles/cmTC_2c3e4.dir/src.c.obj 
+        "D:\\Production Software\\Visual Studio Community\\2022\\Community\\VC\\Tools\\MSVC\\14.37.32822\\bin\\Hostx64\\x64\\cl.exe"  /nologo -DCMAKE_HAVE_LIBC_PTHREAD  /DWIN32 /D_WINDOWS /W3 -DVK_PROTOTYPES  /MDd /Ob0 /Od /RTC1 -Zi /showIncludes /FoCMakeFiles\\cmTC_2c3e4.dir\\src.c.obj /FdCMakeFiles\\cmTC_2c3e4.dir\\ /FS -c R:\\Repositories\\CustomPostProcessor\\out\\build\\x64-debug\\CMakeFiles\\CMakeScratch\\TryCompile-y2mv5k\\src.c
+        R:\\Repositories\\CustomPostProcessor\\out\\build\\x64-debug\\CMakeFiles\\CMakeScratch\\TryCompile-y2mv5k\\src.c(1): fatal error C1083: Cannot open include file: 'pthread.h': No such file or directory
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "D:/Production Software/Visual Studio Community/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.26/Modules/CheckLibraryExists.cmake:71 (try_compile)"
+      - "D:/Production Software/Visual Studio Community/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.26/Modules/FindThreads.cmake:112 (CHECK_LIBRARY_EXISTS)"
+      - "D:/Production Software/Visual Studio Community/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.26/Modules/FindThreads.cmake:175 (_threads_check_lib)"
+      - "glfw-3.3.8/CMakeLists.txt:62 (find_package)"
+    checks:
+      - "Looking for pthread_create in pthreads"
+    directories:
+      source: "R:/Repositories/CustomPostProcessor/out/build/x64-debug/CMakeFiles/CMakeScratch/TryCompile-bv6oos"
+      binary: "R:/Repositories/CustomPostProcessor/out/build/x64-debug/CMakeFiles/CMakeScratch/TryCompile-bv6oos"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3 -DVK_PROTOTYPES"
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "R:/Repositories/CustomPostProcessor/glfw-3.3.8/CMake/modules"
+      CMAKE_MSVC_DEBUG_INFORMATION_FORMAT: "$<IF:$<AND:$<C_COMPILER_ID:MSVC>,$<CXX_COMPILER_ID:MSVC>>,$<$<CONFIG:Debug,RelWithDebInfo>:EditAndContinue>,$<$<CONFIG:Debug,RelWithDebInfo>:ProgramDatabase>>"
+    buildResult:
+      variable: "CMAKE_HAVE_PTHREADS_CREATE"
+      cached: true
+      stdout: |
+        Change Dir: R:/Repositories/CustomPostProcessor/out/build/x64-debug/CMakeFiles/CMakeScratch/TryCompile-bv6oos
+        
+        Run Build Command(s):D:/Production Software/Visual Studio Community/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe -v cmTC_03a17 && [1/2] "D:\\Production Software\\Visual Studio Community\\2022\\Community\\VC\\Tools\\MSVC\\14.37.32822\\bin\\Hostx64\\x64\\cl.exe"  /nologo   /DWIN32 /D_WINDOWS /W3 -DVK_PROTOTYPES -DCHECK_FUNCTION_EXISTS=pthread_create /MDd /Ob0 /Od /RTC1 -Zi /showIncludes /FoCMakeFiles\\cmTC_03a17.dir\\CheckFunctionExists.c.obj /FdCMakeFiles\\cmTC_03a17.dir\\ /FS -c R:\\Repositories\\CustomPostProcessor\\out\\build\\x64-debug\\CMakeFiles\\CMakeScratch\\TryCompile-bv6oos\\CheckFunctionExists.c
+        [2/2] cmd.exe /C "cd . && "D:\\Production Software\\Visual Studio Community\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\\cmTC_03a17.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\mt.exe --manifests  -- "D:\\Production Software\\Visual Studio Community\\2022\\Community\\VC\\Tools\\MSVC\\14.37.32822\\bin\\Hostx64\\x64\\link.exe" /nologo CMakeFiles\\cmTC_03a17.dir\\CheckFunctionExists.c.obj  /out:cmTC_03a17.exe /implib:cmTC_03a17.lib /pdb:cmTC_03a17.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  pthreads.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        FAILED: cmTC_03a17.exe 
+        cmd.exe /C "cd . && "D:\\Production Software\\Visual Studio Community\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\\cmTC_03a17.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\mt.exe --manifests  -- "D:\\Production Software\\Visual Studio Community\\2022\\Community\\VC\\Tools\\MSVC\\14.37.32822\\bin\\Hostx64\\x64\\link.exe" /nologo CMakeFiles\\cmTC_03a17.dir\\CheckFunctionExists.c.obj  /out:cmTC_03a17.exe /implib:cmTC_03a17.lib /pdb:cmTC_03a17.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  pthreads.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        LINK Pass 1: command "D:\\Production Software\\Visual Studio Community\\2022\\Community\\VC\\Tools\\MSVC\\14.37.32822\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_03a17.dir\\CheckFunctionExists.c.obj /out:cmTC_03a17.exe /implib:cmTC_03a17.lib /pdb:cmTC_03a17.pdb /version:0.0 /machine:x64 /debug /INCREMENTAL /subsystem:console pthreads.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\\cmTC_03a17.dir/intermediate.manifest CMakeFiles\\cmTC_03a17.dir/manifest.res" failed (exit code 1104) with the following output:
+        LINK : fatal error LNK1104: cannot open file 'pthreads.lib'\x0d
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "D:/Production Software/Visual Studio Community/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.26/Modules/CheckLibraryExists.cmake:71 (try_compile)"
+      - "D:/Production Software/Visual Studio Community/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.26/Modules/FindThreads.cmake:112 (CHECK_LIBRARY_EXISTS)"
+      - "D:/Production Software/Visual Studio Community/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.26/Modules/FindThreads.cmake:176 (_threads_check_lib)"
+      - "glfw-3.3.8/CMakeLists.txt:62 (find_package)"
+    checks:
+      - "Looking for pthread_create in pthread"
+    directories:
+      source: "R:/Repositories/CustomPostProcessor/out/build/x64-debug/CMakeFiles/CMakeScratch/TryCompile-lplkbb"
+      binary: "R:/Repositories/CustomPostProcessor/out/build/x64-debug/CMakeFiles/CMakeScratch/TryCompile-lplkbb"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3 -DVK_PROTOTYPES"
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "R:/Repositories/CustomPostProcessor/glfw-3.3.8/CMake/modules"
+      CMAKE_MSVC_DEBUG_INFORMATION_FORMAT: "$<IF:$<AND:$<C_COMPILER_ID:MSVC>,$<CXX_COMPILER_ID:MSVC>>,$<$<CONFIG:Debug,RelWithDebInfo>:EditAndContinue>,$<$<CONFIG:Debug,RelWithDebInfo>:ProgramDatabase>>"
+    buildResult:
+      variable: "CMAKE_HAVE_PTHREAD_CREATE"
+      cached: true
+      stdout: |
+        Change Dir: R:/Repositories/CustomPostProcessor/out/build/x64-debug/CMakeFiles/CMakeScratch/TryCompile-lplkbb
+        
+        Run Build Command(s):D:/Production Software/Visual Studio Community/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe -v cmTC_bb633 && [1/2] "D:\\Production Software\\Visual Studio Community\\2022\\Community\\VC\\Tools\\MSVC\\14.37.32822\\bin\\Hostx64\\x64\\cl.exe"  /nologo   /DWIN32 /D_WINDOWS /W3 -DVK_PROTOTYPES -DCHECK_FUNCTION_EXISTS=pthread_create /MDd /Ob0 /Od /RTC1 -Zi /showIncludes /FoCMakeFiles\\cmTC_bb633.dir\\CheckFunctionExists.c.obj /FdCMakeFiles\\cmTC_bb633.dir\\ /FS -c R:\\Repositories\\CustomPostProcessor\\out\\build\\x64-debug\\CMakeFiles\\CMakeScratch\\TryCompile-lplkbb\\CheckFunctionExists.c
+        [2/2] cmd.exe /C "cd . && "D:\\Production Software\\Visual Studio Community\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\\cmTC_bb633.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\mt.exe --manifests  -- "D:\\Production Software\\Visual Studio Community\\2022\\Community\\VC\\Tools\\MSVC\\14.37.32822\\bin\\Hostx64\\x64\\link.exe" /nologo CMakeFiles\\cmTC_bb633.dir\\CheckFunctionExists.c.obj  /out:cmTC_bb633.exe /implib:cmTC_bb633.lib /pdb:cmTC_bb633.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  pthread.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        FAILED: cmTC_bb633.exe 
+        cmd.exe /C "cd . && "D:\\Production Software\\Visual Studio Community\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\\cmTC_bb633.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\mt.exe --manifests  -- "D:\\Production Software\\Visual Studio Community\\2022\\Community\\VC\\Tools\\MSVC\\14.37.32822\\bin\\Hostx64\\x64\\link.exe" /nologo CMakeFiles\\cmTC_bb633.dir\\CheckFunctionExists.c.obj  /out:cmTC_bb633.exe /implib:cmTC_bb633.lib /pdb:cmTC_bb633.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  pthread.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        LINK Pass 1: command "D:\\Production Software\\Visual Studio Community\\2022\\Community\\VC\\Tools\\MSVC\\14.37.32822\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_bb633.dir\\CheckFunctionExists.c.obj /out:cmTC_bb633.exe /implib:cmTC_bb633.lib /pdb:cmTC_bb633.pdb /version:0.0 /machine:x64 /debug /INCREMENTAL /subsystem:console pthread.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\\cmTC_bb633.dir/intermediate.manifest CMakeFiles\\cmTC_bb633.dir/manifest.res" failed (exit code 1104) with the following output:
+        LINK : fatal error LNK1104: cannot open file 'pthread.lib'\x0d
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+...
