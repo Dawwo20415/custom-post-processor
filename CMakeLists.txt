@@ -43,10 +43,21 @@ set(LIBRARIES "glfw;Vulkan::Vulkan")
 # Use vulkan headers from glfw:
 include_directories(${GLFW_DIR}/deps)
 
-# Add source to this project's executable.
+set (LINK_TO_MAIN 
+${sources} 
+${IMGUI_DIR}/backends/imgui_impl_glfw.cpp;
+${IMGUI_DIR}/backends/imgui_impl_vulkan.cpp; 
+${IMGUI_DIR}/imgui.cpp; 
+${IMGUI_DIR}/imgui_draw.cpp; 
+${IMGUI_DIR}/imgui_demo.cpp; 
+${IMGUI_DIR}/imgui_tables.cpp; 
+${IMGUI_DIR}/imgui_widgets.cpp;
+"src/application.cpp";
+"src/application.h";
+)
 
 # Add source to this project's executable.
-add_executable (CMakeTarget "main.cpp" ${sources} ${IMGUI_DIR}/backends/imgui_impl_glfw.cpp ${IMGUI_DIR}/backends/imgui_impl_vulkan.cpp ${IMGUI_DIR}/imgui.cpp ${IMGUI_DIR}/imgui_draw.cpp ${IMGUI_DIR}/imgui_demo.cpp ${IMGUI_DIR}/imgui_tables.cpp ${IMGUI_DIR}/imgui_widgets.cpp)
+add_executable (CMakeTarget "main.cpp" ${LINK_TO_MAIN} )
 target_link_libraries(CMakeTarget ${LIBRARIES})
 target_compile_definitions(CMakeTarget PUBLIC -DImTextureID=ImU64)
 
